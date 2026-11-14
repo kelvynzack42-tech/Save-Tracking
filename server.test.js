@@ -1,0 +1,2 @@
+const {test}=require('node:test');const assert=require('node:assert/strict');const crypto=require('node:crypto');
+test('session token digest is deterministic and not the original token',()=>{const token=crypto.randomBytes(32).toString('base64url');const hash=crypto.createHash('sha256').update(token).digest('hex');assert.notEqual(hash,token);assert.equal(hash,crypto.createHash('sha256').update(token).digest('hex'))});

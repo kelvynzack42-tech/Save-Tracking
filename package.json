@@ -1,0 +1,16 @@
+{
+  "name": "savetrack-financial-workspace",
+  "version": "28.0.0",
+  "private": true,
+  "description": "SaveTrack offline-first authenticated manual-entry finance workspace with category budgets and debt payoff optimization",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "pg": "^8.16.3"
+  }
+}

@@ -1,0 +1,10 @@
+const {test}=require('node:test');
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const path=require('node:path');
+const html=fs.readFileSync(path.join(__dirname,'index.html'),'utf8');
+const readme=fs.readFileSync(path.join(__dirname,'README.md'),'utf8');
+test('category budget guardrails are present and persisted',()=>{assert.match(html,/categoryBudgets/);assert.match(html,/Category spending guardrails/);assert.match(html,/OVER LIMIT/)});
+test('debt payoff optimizer supports avalanche and snowball',()=>{assert.match(html,/avalanche/);assert.match(html,/snowball/);assert.match(html,/Estimated interest/)});
+test('manual-entry-only design remains explicit',()=>{assert.match(html,/No live bank connection/);assert.match(readme,/All financial amounts are entered by the user/);});
+test('offline and online account entry screens are present',()=>{assert.match(html,/id="accountGate"/);assert.match(html,/Create account/);assert.match(html,/PBKDF2/);assert.match(html,/accountSignOutBtn/);assert.match(html,/loadAccountData/);assert.match(html,/AUTH_KEY/)});

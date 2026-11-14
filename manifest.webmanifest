@@ -1,0 +1,31 @@
+{
+  "id": "./",
+  "name": "SaveTrack V26 \u2014 Manual Savings & Finance Tracker",
+  "short_name": "SaveTrack",
+  "description": "Manually enter savings, income, expenses, bills and debts. Track progress and manage your money.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#fffdf5",
+  "theme_color": "#2457c5",
+  "categories": [
+    "finance",
+    "productivity",
+    "utilities"
+  ],
+  "icons": [
+    {
+      "src": "./icons/savetrack-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/savetrack-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: savetrack-v28
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: APP_ORIGIN
+        sync: false
+      - key: DATABASE_URL
+        fromDatabase:
+          name: savetrack-v28-db
+          property: connectionString
+      - key: DATA_ENCRYPTION_KEY
+        generateValue: true
+
+databases:
+  - name: savetrack-v28-db
+    databaseName: savetrackv28
+    user: savetrackv28
+    plan: free
